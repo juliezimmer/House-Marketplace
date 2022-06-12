@@ -39,7 +39,15 @@ function Navbar() {
               width="36px"
               height="36px"
             />
-            <p>Offer</p>
+            <p
+              className={
+                pathMatchRoute("/offer")
+                  ? "navbarListItemNameActive"
+                  : "NavbarListItemName"
+              }
+            >
+              Offer
+            </p>
           </li>
           <li className="navbarListItem" onClick={() => navigate("/profile")}>
             <PersonOutlineIcon
@@ -47,7 +55,15 @@ function Navbar() {
               width="36px"
               height="36px"
             />
-            <p>Profile</p>
+            <p
+              className={
+                pathMatchRoute("/profile")
+                  ? "navbarListItemNameActive"
+                  : "NavbarListItemName"
+              }
+            >
+              Profile
+            </p>
           </li>
         </ul>
       </nav>
