@@ -37,13 +37,14 @@ function SignUp() {
     e.preventDefault();
 
     try {
+      // try to sign up //
       const auth = getAuth();
 
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
-      ); // pulled from form
+      ); // pulled from form data //
 
       const user = userCredential.user;
 
@@ -63,7 +64,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong with registration");
     }
   };
 
